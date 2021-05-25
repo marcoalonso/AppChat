@@ -8,5 +8,6 @@ target 'Login' do
   # Pods for Login
 pod 'CLTypingLabel','0.4.0'
 pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
 
 end
