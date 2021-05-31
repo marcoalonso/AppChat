@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		508AC6D9CAC7AB7D24FFED2A /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23ECD7801DCE9F83F16389CF /* Pods_Login.framework */; };
+		60149A3126651C080008E9E2 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 60149A3026651C080008E9E2 /* IQKeyboardManagerSwift */; };
 		606A1157265E83BF00D50BEE /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A1156265E83BF00D50BEE /* InicioViewController.swift */; };
 		606A1159265E864A00D50BEE /* Mensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A1158265E864A00D50BEE /* Mensaje.swift */; };
 		608C18D7265BE20E009C1F55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 608C18D6265BE20E009C1F55 /* GoogleService-Info.plist */; };
@@ -46,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				508AC6D9CAC7AB7D24FFED2A /* Pods_Login.framework in Frameworks */,
+				60149A3126651C080008E9E2 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +126,9 @@
 			dependencies = (
 			);
 			name = Login;
+			packageProductDependencies = (
+				60149A3026651C080008E9E2 /* IQKeyboardManagerSwift */,
+			);
 			productName = Login;
 			productReference = 60A1C82E265546B800EE744B /* Login.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +156,9 @@
 				Base,
 			);
 			mainGroup = 60A1C825265546B800EE744B;
+			packageReferences = (
+				60149A2F26651C080008E9E2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 60A1C82F265546B800EE744B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -431,6 +439,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		60149A2F26651C080008E9E2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		60149A3026651C080008E9E2 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60149A2F26651C080008E9E2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 60A1C826265546B800EE744B /* Project object */;
 }

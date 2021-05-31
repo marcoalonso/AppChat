@@ -276,11 +276,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chats" id="EMY-A1-a28">
-                        <barButtonItem key="rightBarButtonItem" title="Salir" id="S7y-gr-rox">
-                            <connections>
-                                <action selector="salirButton:" destination="4YR-pc-aJw" id="iug-8O-J71"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Salir" id="S7y-gr-rox">
+                                <connections>
+                                    <action selector="salirButton:" destination="4YR-pc-aJw" id="iug-8O-J71"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Perfil" image="person.fill" catalog="system" id="aUb-3e-utm">
+                                <connections>
+                                    <segue destination="mJC-3t-a08" kind="show" id="zq3-3m-O7f"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="mensajeEnviarTF" destination="u6n-QU-Cq3" id="NxN-Qa-hFq"/>
@@ -289,7 +296,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHB-Xm-oUx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2988" y="106"/>
+            <point key="canvasLocation" x="2628" y="147"/>
+        </scene>
+        <!--Editar Perfil-->
+        <scene sceneID="RmR-aT-iPl">
+            <objects>
+                <viewController id="mJC-3t-a08" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a2Y-kf-Mqy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3Vu-GW-Zcl">
+                                <rect key="frame" x="108" y="114" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cT-5b-Ea9">
+                                <rect key="frame" x="123" y="430" width="177" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="     Guardar      ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="     Nombre     " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZE-eT-tFR">
+                                <rect key="frame" x="108" y="307" width="206" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ajr-7n-1kf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Editar Perfil" id="yj5-3Y-gMo">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera" catalog="system" id="G7J-5R-QAm"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jpI-3n-HKv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3363.7681159420295" y="135.9375"/>
         </scene>
         <!--Registro-->
         <scene sceneID="EQ7-61-WPD">
@@ -397,7 +448,9 @@
         <segue reference="69A-HY-Adp"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
         <image name="logo itmorelia" width="700" height="696"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="send" width="920" height="512"/>
         <systemColor name="systemBackgroundColor">
