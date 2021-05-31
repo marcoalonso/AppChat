@@ -301,42 +301,87 @@
         <!--Editar Perfil-->
         <scene sceneID="RmR-aT-iPl">
             <objects>
-                <viewController id="mJC-3t-a08" sceneMemberID="viewController">
+                <viewController id="mJC-3t-a08" customClass="EditarPerfilViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a2Y-kf-Mqy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3Vu-GW-Zcl">
-                                <rect key="frame" x="108" y="114" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cT-5b-Ea9">
-                                <rect key="frame" x="123" y="430" width="177" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="     Guardar      ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="     Nombre     " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZE-eT-tFR">
-                                <rect key="frame" x="108" y="307" width="206" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="ioV-Wt-Ihc">
+                                <rect key="frame" x="15" y="98" width="384" height="744"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="omj-KX-W37">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="168"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="perfil" translatesAutoresizingMaskIntoConstraints="NO" id="3Vu-GW-Zcl">
+                                                <rect key="frame" x="132" y="20" width="120" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="S17-j6-tvA"/>
+                                                    <constraint firstAttribute="height" constant="180" id="cZh-xm-VBw"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="3Vu-GW-Zcl" firstAttribute="centerX" secondItem="omj-KX-W37" secondAttribute="centerX" id="qkt-5c-rWV"/>
+                                            <constraint firstItem="3Vu-GW-Zcl" firstAttribute="centerY" secondItem="omj-KX-W37" secondAttribute="centerY" id="yeP-Tl-8UD"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gPb-rG-PPa">
+                                        <rect key="frame" x="0.0" y="213" width="384" height="115"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="     Nombre     " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZE-eT-tFR">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="A8b-DS-fAW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cT-5b-Ea9">
+                                                <rect key="frame" x="0.0" y="65" width="384" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="     Guardar      ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="GuardarPerfilButton:" destination="mJC-3t-a08" eventType="touchUpInside" id="gLs-cD-vYh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bXd-sR-3DC" userLabel="Vista Relleno">
+                                        <rect key="frame" x="0.0" y="373" width="384" height="371"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ajr-7n-1kf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ioV-Wt-Ihc" firstAttribute="leading" secondItem="ajr-7n-1kf" secondAttribute="leading" constant="15" id="b73-TL-yYT"/>
+                            <constraint firstItem="ajr-7n-1kf" firstAttribute="bottom" secondItem="ioV-Wt-Ihc" secondAttribute="bottom" constant="20" id="gw7-bl-2v2"/>
+                            <constraint firstItem="ajr-7n-1kf" firstAttribute="trailing" secondItem="ioV-Wt-Ihc" secondAttribute="trailing" constant="15" id="tG8-uB-N3f"/>
+                            <constraint firstItem="ioV-Wt-Ihc" firstAttribute="top" secondItem="ajr-7n-1kf" secondAttribute="top" constant="10" id="ymv-Xf-CKu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Editar Perfil" id="yj5-3Y-gMo">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera" catalog="system" id="G7J-5R-QAm"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera" catalog="system" id="G7J-5R-QAm">
+                            <connections>
+                                <action selector="tomarFotoButton:" destination="mJC-3t-a08" id="h1i-Rd-MBT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imagenPerfil" destination="3Vu-GW-Zcl" id="w7T-Dj-LqU"/>
+                        <outlet property="nombreEditarTF" destination="tZE-eT-tFR" id="dQx-yh-7Dz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpI-3n-HKv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -450,7 +495,7 @@
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="logo itmorelia" width="700" height="696"/>
-        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="perfil" width="512" height="512"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="send" width="920" height="512"/>
         <systemColor name="systemBackgroundColor">
